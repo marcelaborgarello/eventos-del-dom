@@ -1,7 +1,7 @@
 const keyboardEvent = (e) => {
-  const red = document.querySelector(".red");
+  const cuadro = document.querySelector(".cuadro");
 
-  let marginString = red.style.marginLeft.replace("px", "");
+  let marginString = cuadro.style.marginLeft.replace("px", "");
   let marginNumber = parseInt(marginString || "0");
   let newMarginLeft = marginNumber;
 
@@ -19,13 +19,13 @@ const keyboardEvent = (e) => {
     newMarginLeft = 0;
   }
 
-  red.style.marginLeft = newMarginLeft + "px";
+  cuadro.style.marginLeft = newMarginLeft + "px";
 };
 
 const eventCLick = (e) => {
-  const red = document.querySelector(".red");
+  const cuadro = document.querySelector(".cuadro");
 
-  let marginString = red.style.marginLeft.replace("px", "");
+  let marginString = cuadro.style.marginLeft.replace("px", "");
   let marginNumber = parseInt(marginString || "0");
   let newMarginLeft = marginNumber;
 
@@ -48,12 +48,41 @@ const eventCLick = (e) => {
     newMarginLeft = 0;
   }
 
-  red.style.marginLeft = newMarginLeft + "px";
+  cuadro.style.marginLeft = newMarginLeft + "px";
+};
+
+const eventCLickColor = (e) => {
+  const divRojo = document.querySelector(".cuadro");
+
+  if (e.target.classList[0] === "rojo") {
+    divRojo.style.backgroundColor = "red";
+  }
+
+  if (e.target.classList[0] === "azul") {
+    divRojo.style.backgroundColor = "blue";
+  }
+
+  if (e.target.classList[0] === "verde") {
+    divRojo.style.backgroundColor = "green";
+  }
+
+  if (e.target.classList[0] === "amarillo") {
+    divRojo.style.backgroundColor = "yellow";
+  }
+
+  if (e.target.classList[0] === "violeta") {
+    divRojo.style.backgroundColor = "purple";
+  }
+
+  if (e.target.classList[0] === "negro") {
+    divRojo.style.backgroundColor = "black";
+  }
 };
 
 const main = () => {
-  document.addEventListener("click", eventCLick);
   document.addEventListener("keydown", keyboardEvent);
+  document.addEventListener("click", eventCLick);
+  document.addEventListener("click", eventCLickColor);
 };
 
 main();

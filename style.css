@@ -4,14 +4,65 @@
   padding: 10px;
 }
 
-.red {
+.cuadro {
   display: flex;
 
   background-color: red;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: none;
   border-radius: 8px;
+}
+
+.contenedor-colores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colores {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+}
+
+.rojo,
+.azul,
+.verde,
+.amarillo,
+.violeta,
+.negro {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.verde {
+  background-color: green;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.violeta {
+  background-color: purple;
+}
+
+.negro {
+  background-color: black;
 }
 
 span {
