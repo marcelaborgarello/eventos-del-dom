@@ -1,0 +1,31 @@
+.contenedor {
+  display: flex;
+  border: solid 3px black;
+  padding: 10px;
+}
+
+.red {
+  display: flex;
+
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 8px;
+}
+
+span {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.fi,
+code {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 7px;
+  text-align: center;
+}
