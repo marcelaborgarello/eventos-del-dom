@@ -40,6 +40,15 @@
   margin: 5px;
 }
 
+.rojo:hover,
+.azul:hover,
+.verde:hover,
+.amarillo:hover,
+.violeta:hover,
+.negro:hover {
+  box-shadow: 3px 3px 5px grey;
+}
+
 .rojo {
   background-color: red;
 }
@@ -82,4 +91,9 @@ span {
   font-weight: bold;
   padding: 7px;
   text-align: center;
+}
+
+.fi:hover,
+.code:hover {
+  box-shadow: 3px 3px 5px grey;
 }
