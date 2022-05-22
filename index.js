@@ -5,7 +5,10 @@ const keyboardEvent = (e) => {
   let marginNumber = parseInt(marginString || "0");
   let newMarginLeft = marginNumber;
 
-  if (e.key === "ArrowRight" && newMarginLeft <= document.body.clientWidth) {
+  if (
+    e.key === "ArrowRight" &&
+    newMarginLeft + 110 <= document.body.clientWidth
+  ) {
     newMarginLeft += 10;
   }
   if (e.key === "ArrowLeft" && newMarginLeft > 0) {
@@ -13,15 +16,20 @@ const keyboardEvent = (e) => {
   }
 
   if (e.key === "ArrowLeft" && marginNumber <= 0) {
-    alert("No puedes moverlo a la izquierda. Supera el límite");
+    alert(`Superaste el límite. 
+    
+    Restaurar valores ${(newMarginLeft = 0)} ${(cuadro.style.backgroundColor =
+      "red")} predeterminados`);
   }
 
   if (
     e.key === "ArrowRight" &&
-    newMarginLeft >= document.body.clientWidth - 100
+    newMarginLeft >= document.body.clientWidth - 110
   ) {
-    console.log(document.body.clientWidth);
-    alert("No puedes moverlo a la derecha. Supera el límite");
+    alert(`Superaste el límite. 
+    
+    Restaurar valores ${(newMarginLeft = 0)} ${(cuadro.style.backgroundColor =
+      "red")} predeterminados`);
   }
 
   if (e.key === "Escape") {
